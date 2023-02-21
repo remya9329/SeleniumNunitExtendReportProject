@@ -53,8 +53,8 @@ namespace SeleniumNUnitExtentReport.Config
         [SetUp]
         public void BeforeTest()
         {
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService("webdriver.chrome.driver", @"C:\\Program Files\\Google\\Chrome Beta\\Application\\chromedriver.exe");
-            _driver = new ChromeDriver(service);
+           // ChromeDriverService service = ChromeDriverService.CreateDefaultService("webdriver.chrome.driver", @"C:\\Program Files\\Google\\Chrome Beta\\Application\\chromedriver.exe");
+            _driver = new ChromeDriver();
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
             _driver.Manage().Window.Maximize();
             _test = _extent.CreateTest(TestContext.CurrentContext.Test.Name);
